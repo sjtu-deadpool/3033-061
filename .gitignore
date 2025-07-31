@@ -205,3 +205,18 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# local history
+.lh/.lhignore
+.lh/*
+
+# MovieLens 100K dataset
+ml-100k/*
+
+# Douban dataset
+Douban_dataset1/*
+Douban_dataset2/*
+
+# IMDB NLP dataset
+IMDB_NLP/*
+
