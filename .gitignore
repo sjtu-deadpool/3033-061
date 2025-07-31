@@ -220,3 +220,5 @@ Douban_dataset2/*
 # IMDB NLP dataset
 IMDB_NLP/*
 
+# SpecStory history files
+.specstory/*
