@@ -1,0 +1,56 @@
+{
+  "comparison_timestamp": "2025-08-11 12:54:38",
+  "comparison_type": "Fair Selection Effectiveness",
+  "evaluation_method_used": "cnn_features",
+  "configuration": {
+    "total_image_sets": 5,
+    "images_per_set": 10,
+    "selection_target": 3,
+    "max_movies_tested": 5
+  },
+  "results_summary": {
+    "selection_methods_tested": [
+      "histogram",
+      "ssim",
+      "perceptual_hash",
+      "combined",
+      "cnn_features",
+      "clip_features"
+    ],
+    "total_tests": 30,
+    "successful_tests": 30,
+    "failed_tests": 0
+  },
+  "methodology": "Each method selects images using own criteria, all evaluated using unified method for fair comparison",
+  "files_created": [
+    "selection_methods_comparison.csv",
+    "successful_comparisons.csv",
+    "comparison_summary.json"
+  ],
+  "performance_summary": {
+    "diversity_score": {
+      "clip_features": 0.07900569041570027,
+      "cnn_features": 0.080535622437795,
+      "combined": 0.10758443276087444,
+      "histogram": 0.10771344502766929,
+      "perceptual_hash": 0.0940937121709188,
+      "ssim": 0.1219171722730001
+    },
+    "selection_time": {
+      "clip_features": 3.1306708812713624,
+      "cnn_features": 3.076509952545166,
+      "combined": 1.398528480529785,
+      "histogram": 0.10333542823791504,
+      "perceptual_hash": 0.12412877082824707,
+      "ssim": 1.1711376190185547
+    },
+    "avg_similarity": {
+      "clip_features": 0.9209943095842996,
+      "cnn_features": 0.9194643775622049,
+      "combined": 0.8924155672391256,
+      "histogram": 0.8922865549723307,
+      "perceptual_hash": 0.9059062878290811,
+      "ssim": 0.8780828277269999
+    }
+  }
+}
