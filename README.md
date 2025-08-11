@@ -87,7 +87,7 @@ CSCI-GA 3033-061Final Project
 | **July 1–14** | 文本/视觉编码器（BERT, ViT）实现；利用LLM进行剧情/标签丰富化 (Text/visual encoder; LLM for plot/tagline enrichment) |
 | **July 15–26** | 融合模型开发与训练（包含多任务类型分类） (Fusion model, training with multitask genre classification) |
 | **July 27–Aug 4** | 模型验证与消融实验（移除视觉/文本模态，测试冷启动）(Validation + Ablation) |
-| **Aug 5–10** | 最终报告撰写、可视化、幻灯片制作和项目提交 (Final write-up, visualization, slide and report submission) |
+| **Aug 5–15** | 最终报告撰写、可视化、幻灯片制作和项目提交 (Final write-up, visualization, slide and report submission) |
 
 ## **7. 预期成果与贡献 (Expected Outcomes & Contributions)**
 
