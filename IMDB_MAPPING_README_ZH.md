@@ -1,34 +1,34 @@
 # MovieLens 100k IMDB ID Mapping Generator
 
-本文档说明如何生成MovieLens 100k数据集中943部电影的IMDB ID与电影名以及u.item中序号的对应文件。
+This document explains how to generate the IMDB ID mapping file for the 943 movies in the MovieLens 100k dataset, with their corresponding movie titles and u.item sequence numbers.
 
-## 生成的文件
+## Generated Files
 
-### 基础文件
-1. **movielens_movies.csv** - 包含所有电影信息的CSV文件
-2. **imdb_mapping_template.json** - JSON格式的模板文件
-3. **imdb_mapping_template.py** - Python格式的占位符映射
+### Basic Files
+1. **movielens_movies.csv** - CSV file containing all movie information
+2. **imdb_mapping_template.json** - JSON format template file
+3. **imdb_mapping_template.py** - Python format placeholder mapping
 
-### 真实IMDB ID文件
-4. **real_imdb_mapping.py** - 包含已验证IMDB ID的映射文件
-5. **imdb_lookup_helper.py** - 手动查找IMDB ID的辅助脚本
+### Real IMDB ID Files
+4. **real_imdb_mapping.py** - Mapping file containing verified IMDB IDs
+5. **imdb_lookup_helper.py** - Assistant script for manual IMDB ID lookup
 
-## 使用步骤
+## Usage Steps
 
-### 第一步：生成基础映射
+### Step 1: Generate Basic Mapping
 ```bash
 python generate_imdb_mapping.py
 ```
-这将生成基础的映射文件和模板。
+This will generate the basic mapping files and templates.
 
-### 第二步：生成真实IMDB ID映射
+### Step 2: Generate Real IMDB ID Mapping
 ```bash
 python generate_real_imdb_mapping.py
 ```
-这将生成包含一些已知IMDB ID的映射文件。
+This will generate a mapping file containing some known IMDB IDs.
 
-### 第三步：查看当前结果
-查看 `real_imdb_mapping.py` 文件，您会看到类似于您要求的格式：
+### Step 3: View Current Results
+Check the `real_imdb_mapping.py` file, and you will see a format similar to what you requested:
 
 ```python
 IMDB_LIST = [
@@ -39,17 +39,17 @@ IMDB_LIST = [
     "0112462",  # 8. Babe (1995) - VERIFIED
     "0114369",  # 11. Seven (Se7en) (1995) - VERIFIED
     "0114814",  # 12. Usual Suspects, The (1995) - VERIFIED
-    # ... 更多电影
+    # ... more movies
 ]
 ```
 
-## 当前状态
+## Current Status
 
-- **总电影数**: 1682部
-- **已验证IMDB ID**: 20个 (1.2%)
-- **需要查找**: 1662个
+- **Total Movies**: 1682 films
+- **Verified IMDB IDs**: 20 (1.2%)
+- **Need to Find**: 1662
 
-### 已验证的电影（示例）
+### Verified Movies (Examples)
 ```
 "0114709",  # 1. Toy Story (1995)
 "0113189",  # 2. GoldenEye (1995)  
@@ -63,73 +63,73 @@ IMDB_LIST = [
 "0116282",  # 100. Fargo (1996)
 ```
 
-## 如何添加更多真实IMDB ID
+## How to Add More Real IMDB IDs
 
-### 方法1：使用辅助脚本
+### Method 1: Using Helper Script
 ```bash
 python imdb_lookup_helper.py
 ```
-这个脚本会：
-- 自动在浏览器中打开IMDB搜索
-- 让您输入找到的IMDB ID
-- 生成正确格式的映射条目
+This script will:
+- Automatically open IMDB search in browser
+- Allow you to input the found IMDB ID
+- Generate correctly formatted mapping entries
 
-### 方法2：手动查找并编辑
-1. 在IMDB.com搜索电影标题和年份
-2. 从URL中获取IMDB ID (例如: tt0111161 -> 使用 0111161)
-3. 在 `generate_real_imdb_mapping.py` 的 `KNOWN_IMDB_IDS` 字典中添加:
+### Method 2: Manual Search and Edit
+1. Search for movie title and year on IMDB.com
+2. Extract IMDB ID from URL (e.g., tt0111161 -> use 0111161)
+3. Add to the `KNOWN_IMDB_IDS` dictionary in `generate_real_imdb_mapping.py`:
    ```python
    KNOWN_IMDB_IDS = {
-       # 现有的映射...
+       # Existing mappings...
        199: "0111161",  # The Shawshank Redemption (1994)
-       # 添加更多...
+       # Add more...
    }
    ```
-4. 重新运行 `python generate_real_imdb_mapping.py`
+4. Re-run `python generate_real_imdb_mapping.py`
 
-### 方法3：批量查找（高级）
-如果您有OMDb API密钥，可以修改 `generate_real_imdb_mapping.py` 中的API调用来自动查找。
+### Method 3: Batch Lookup (Advanced)
+If you have an OMDb API key, you can modify the API calls in `generate_real_imdb_mapping.py` to automatically lookup IDs.
 
-## 最终输出格式
+## Final Output Format
 
-最终您将得到符合要求的格式：
+Eventually you will get the required format:
 ```python
 "0111161",  # 1. The Shawshank Redemption (1994)
 "0068646",  # 2. The Godfather (1972)  
 "0071562",  # 3. The Godfather: Part II (1974)
 "0468569",  # 4. The Dark Knight (2008)
 "0050083",  # 5. 12 Angry Men (1957)
-# ... 继续其余电影
+# ... continue with remaining movies
 ```
 
-## 文件说明
+## File Descriptions
 
 ### generate_imdb_mapping.py
-- 解析u.item文件
-- 提取电影ID、标题、年份
-- 生成基础模板文件
+- Parses u.item file
+- Extracts movie ID, title, year
+- Generates basic template files
 
 ### generate_real_imdb_mapping.py  
-- 包含已知的真实IMDB ID
-- 生成混合占位符和真实ID的映射
-- 提供统计信息和进度跟踪
+- Contains known real IMDB IDs
+- Generates mixed placeholder and real ID mapping
+- Provides statistics and progress tracking
 
 ### imdb_lookup_helper.py
-- 交互式IMDB ID查找工具
-- 自动打开浏览器搜索
-- 方便批量处理
+- Interactive IMDB ID lookup tool
+- Automatically opens browser search
+- Convenient for batch processing
 
-## 提示
+## Tips
 
-1. **优先处理热门电影**: 先查找知名度高的电影，这些通常更容易找到
-2. **使用原始标题**: 如果英文标题找不到，尝试使用原始语言标题
-3. **验证年份**: 确保IMDB上的发行年份与数据集中的年份匹配
-4. **批量处理**: 使用辅助脚本可以大大提高效率
+1. **Prioritize Popular Movies**: Look up well-known movies first, as they are usually easier to find
+2. **Use Original Titles**: If English titles don't work, try using original language titles
+3. **Verify Years**: Ensure release year on IMDB matches the year in dataset
+4. **Batch Processing**: Using helper scripts can greatly improve efficiency
 
-## 贡献
+## Contribution
 
-如果您找到了更多真实的IMDB ID，请更新 `KNOWN_IMDB_IDS` 字典并重新生成映射文件。这样可以帮助其他使用者获得更完整的映射。
+If you find more real IMDB IDs, please update the `KNOWN_IMDB_IDS` dictionary and regenerate the mapping file. This can help other users get a more complete mapping.
 
 ---
 
-**注意**: IMDB ID格式应该是7位数字，不包含"tt"前缀。例如：`tt0111161` -> `0111161`
+**Note**: IMDB ID format should be 7 digits without the "tt" prefix. For example: `tt0111161` -> `0111161`

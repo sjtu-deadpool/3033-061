@@ -1,101 +1,101 @@
-# MovieLens 100k 推荐系统 - 环境配置指南
+# MovieLens 100k Recommendation System - Environment Setup Guide
 
-## 项目依赖
+## Project Dependencies
 
-本项目基于MovieLens 100k数据集构建电影推荐系统，需要以下Python包：
+This project builds a movie recommendation system based on the MovieLens 100k dataset and requires the following Python packages:
 
-### 核心依赖
-- **pandas**: 数据处理和分析
-- **numpy**: 数值计算
-- **scikit-learn**: 机器学习算法
-- **matplotlib**: 数据可视化
-- **seaborn**: 统计图表
-- **ipykernel**: Jupyter Notebook支持
+### Core Dependencies
+- **pandas**: Data processing and analysis
+- **numpy**: Numerical computing
+- **scikit-learn**: Machine learning algorithms
+- **matplotlib**: Data visualization
+- **seaborn**: Statistical plots
+- **ipykernel**: Jupyter Notebook support
 
-## 快速开始
+## Quick Start
 
-### 方法1：自动安装（推荐）
-运行notebook的第一个代码cell，会自动安装所需依赖：
+### Method 1: Automatic Installation (Recommended)
+Run the first code cell of the notebook to automatically install required dependencies:
 ```python
-# 运行notebook中的第一个cell即可
+# Simply run the first cell in the notebook
 ```
 
-### 方法2：手动安装
+### Method 2: Manual Installation
 ```bash
-# 安装所有依赖
+# Install all dependencies
 pip install -r requirements.txt
 
-# 或者逐个安装
+# Or install individually
 pip install pandas numpy scikit-learn matplotlib seaborn ipykernel jupyter
 ```
 
-### 方法3：使用conda（推荐用于数据科学）
+### Method 3: Using conda (Recommended for Data Science)
 ```bash
-# 创建新环境
+# Create new environment
 conda create -n movielens python=3.11
 
-# 激活环境
+# Activate environment
 conda activate movielens
 
-# 安装依赖
+# Install dependencies
 conda install pandas numpy scikit-learn matplotlib seaborn jupyter ipykernel
 
-# 或者使用pip安装requirements.txt
+# Or use pip to install requirements.txt
 pip install -r requirements.txt
 ```
 
-## 项目文件结构
+## Project File Structure
 
 ```
 3033-061/
-├── ml-100k/                                    # MovieLens数据集
-├── requirements.txt                            # 项目依赖配置
-├── movielens_dataset_explorer.py              # 数据集分析脚本
-├── movielens_recommendation_system.ipynb      # 推荐系统开发notebook
-├── SETUP.md                                   # 本配置指南
-└── README.md                                  # 项目说明
+├── ml-100k/                                    # MovieLens dataset
+├── requirements.txt                            # Project dependency configuration
+├── movielens_dataset_explorer.py              # Dataset analysis script
+├── movielens_recommendation_system.ipynb      # Recommendation system development notebook
+├── SETUP.md                                   # This configuration guide
+└── README.md                                  # Project description
 ```
 
-## 使用说明
+## Usage Instructions
 
-1. **数据探索**：
+1. **Data Exploration**:
    ```bash
    python movielens_dataset_explorer.py
    ```
 
-2. **推荐系统开发**：
-   打开并运行 `movielens_recommendation_system.ipynb`
+2. **Recommendation System Development**:
+   Open and run `movielens_recommendation_system.ipynb`
 
-## 常见问题
+## Frequently Asked Questions
 
-### Q: notebook运行时提示缺少ipykernel？
-A: 运行以下命令：
+### Q: Missing ipykernel when running notebook?
+A: Run the following commands:
 ```bash
 pip install ipykernel
 python -m ipykernel install --user --name=movielens
 ```
 
-### Q: 图表中文显示有问题？
-A: 系统会自动尝试使用SimHei字体，如果无效请安装中文字体或使用英文标签。
+### Q: Problems with Chinese character display in plots?
+A: The system will automatically try to use the SimHei font. If it doesn't work, please install Chinese fonts or use English labels.
 
-### Q: 内存不足？
-A: MovieLens 100k数据集相对较小，如果遇到内存问题，可以：
-- 减少批处理大小
-- 使用数据抽样
-- 增加系统内存
+### Q: Out of memory issues?
+A: The MovieLens 100k dataset is relatively small. If you encounter memory problems, you can:
+- Reduce batch size
+- Use data sampling
+- Increase system memory
 
-## 预期输出
+## Expected Output
 
-- **数据分析脚本**：生成 `movielens_analysis.png` 可视化图表
-- **推荐系统**：训练好的协同过滤模型和推荐结果
+- **Data Analysis Script**: Generates `movielens_analysis.png` visualization charts
+- **Recommendation System**: Trained collaborative filtering models and recommendation results
 
-## 下一步
+## Next Steps
 
-完成第一阶段后，可以考虑：
-- 添加更多推荐算法（SVD、NMF等）
-- 集成内容特征（电影流派、演员等）
-- 实现混合推荐系统
-- 添加Web界面展示
+After completing the first phase, you can consider:
+- Adding more recommendation algorithms (SVD, NMF, etc.)
+- Integrating content features (movie genres, actors, etc.)
+- Implementing hybrid recommendation systems
+- Adding web interface for display
 
 ---
-**注意**：首次运行时自动安装依赖可能需要几分钟时间，请耐心等待。
+**Note**: Automatic dependency installation may take a few minutes when running for the first time. Please be patient.
