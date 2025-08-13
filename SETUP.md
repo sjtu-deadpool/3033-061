@@ -51,7 +51,8 @@ pip install -r requirements.txt
 ├── ml-100k/                                    # MovieLens dataset
 ├── requirements.txt                            # Project dependency configuration
 ├── movielens_dataset_explorer.py              # Dataset analysis script
-├── movielens_recommendation_system.ipynb      # Recommendation system development notebook
+├── movielens_comprehensive_english_system.ipynb # Recommendation system(without multimodal but compared PCA and SVD) development notebook
+├── multimodal_recommendation_english.ipynb     # Multimodal Recommendation system development notebook
 ├── SETUP.md                                   # This configuration guide
 └── README.md                                  # Project description
 ```
@@ -64,7 +65,8 @@ pip install -r requirements.txt
    ```
 
 2. **Recommendation System Development**:
-   Open and run `movielens_recommendation_system.ipynb`
+   - Open and run `movielens_comprehensive_english_system.ipynb` for recommendation system without multimodal features but comparing PCA and SVD methods
+   - Open and run `multimodal_recommendation_english.ipynb` for multimodal recommendation system development
 
 ## Frequently Asked Questions
 
