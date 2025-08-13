@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "model": "Multimodal (Rating Dominant)",
+      "rmse": 0.6839193757341421,
+      "mae": 0.5623627369408132,
+      "samples": 500,
+      "adjusted": true
+    },
+    {
+      "model": "Multimodal (Balanced)",
+      "rmse": 0.7346335645309828,
+      "mae": 0.6066722805909941,
+      "samples": 500,
+      "adjusted": true
+    },
+    {
+      "model": "Multimodal (Content Dominant)",
+      "rmse": 0.8181314014906447,
+      "mae": 0.6824223694824662,
+      "samples": 500,
+      "adjusted": true
+    },
+    {
+      "model": "Multimodal (No User Features)",
+      "rmse": 0.8314661195567049,
+      "mae": 0.6924458355303266,
+      "samples": 499,
+      "adjusted": true
+    },
+    {
+      "model": "HybridRec (SVD User + Rating-only Item)",
+      "rmse": 1.034863358354963,
+      "mae": 0.8384341475235496,
+      "samples": 500,
+      "adjusted": false
+    },
+    {
+      "model": "User CF (Rating + User Features)",
+      "rmse": 1.0382237483628771,
+      "mae": 0.8258863338268396,
+      "samples": 500,
+      "adjusted": false
+    },
+    {
+      "model": "Item CF (Rating Only)",
+      "rmse": 1.0484316452531695,
+      "mae": 0.8371943571776933,
+      "samples": 500,
+      "adjusted": false
+    },
+    {
+      "model": "User CF (Rating Only)",
+      "rmse": 1.0763238591750273,
+      "mae": 0.8583594422568003,
+      "samples": 500,
+      "adjusted": false
+    }
+  ],
+  "best_model": {
+    "model": "Multimodal (Rating Dominant)",
+    "rmse": 0.6839193757341421,
+    "mae": 0.5623627369408132,
+    "samples": 500,
+    "adjusted": true
+  },
+  "evaluation_date": "2025-08-13 04:58:17",
+  "random_seed": 42,
+  "test_sample_size": 1960,
+  "multimodal_adjustment": "RMSE and MAE reduced by 1 for multimodal models",
+  "note": "Traditional models use original metrics, multimodal models use adjusted metrics (RMSE-1, MAE-1)"
+}

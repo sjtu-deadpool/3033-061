@@ -1,0 +1,45 @@
+{
+  "original_features": 24,
+  "fvt_features": 12,
+  "fct_features": 23,
+  "combined_features": 11,
+  "variance_threshold": 0.31935817805383016,
+  "correlation_threshold": 0.8,
+  "final_selected_features": [
+    "runtime",
+    "vote_average",
+    "vote_count",
+    "budget",
+    "revenue",
+    "downloaded_images_count",
+    "genres_count",
+    "keywords_count",
+    "original_language_encoded",
+    "production_countries_count",
+    "production_companies_count"
+  ],
+  "removed_by_fvt": [
+    "genre_drama",
+    "genre_comedy",
+    "genre_crime",
+    "genre_thriller",
+    "genre_romance",
+    "genre_action",
+    "genre_mystery",
+    "genre_adventure",
+    "genre_family",
+    "genre_science_fiction",
+    "directors_count",
+    "cast_count"
+  ],
+  "removed_by_fct": [
+    "popularity"
+  ],
+  "high_correlation_pairs": [
+    {
+      "feature1": "vote_count",
+      "feature2": "popularity",
+      "correlation": 0.9409885654528236
+    }
+  ]
+}

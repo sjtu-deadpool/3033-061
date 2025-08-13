@@ -1,0 +1,19 @@
+{
+  "comparison_timestamp": "2025-08-11 12:48:23",
+  "comparison_type": "Fair Selection Effectiveness",
+  "evaluation_method_used": "cnn_features",
+  "total_image_sets": 3,
+  "images_per_set": 10,
+  "selection_target": 5,
+  "selection_methods_tested": [
+    "histogram",
+    "ssim",
+    "perceptual_hash",
+    "combined",
+    "cnn_features",
+    "clip_features"
+  ],
+  "total_tests": 18,
+  "successful_tests": 14,
+  "methodology": "Each method selects images using own criteria, all evaluated using unified method for fair comparison"
+}

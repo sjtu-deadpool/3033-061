@@ -1,0 +1,29 @@
+{
+  "sample_sets": [
+    {
+      "movie_id": 16,
+      "movie_title": "French Twist (Gazon maudit)",
+      "image_count": 10
+    },
+    {
+      "movie_id": 45,
+      "movie_title": "Eat Drink Man Woman",
+      "image_count": 10
+    },
+    {
+      "movie_id": 27,
+      "movie_title": "Bad Boys",
+      "image_count": 10
+    },
+    {
+      "movie_id": 9,
+      "movie_title": "Dead Man Walking",
+      "image_count": 10
+    },
+    {
+      "movie_id": 13,
+      "movie_title": "Mighty Aphrodite",
+      "image_count": 10
+    }
+  ]
+}

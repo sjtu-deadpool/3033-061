@@ -220,3 +220,23 @@ Douban_dataset2/*
 # IMDB NLP dataset
 IMDB_NLP/*
 
+# SpecStory history files
+.specstory/*
+
+# Movie trailers
+Trailers/*.mp4
+Trailers/*.webm
+
+# TMDB movie images
+tmdb_movie_images/*
+multimodal_images/*
+selected_images/*
+
+# Phase 1 data
+phase1/*
+
+# tmdb_movie_data
+tmdb_movie_data/*
+
+# Create
+Create/*
