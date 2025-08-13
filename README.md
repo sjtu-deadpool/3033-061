@@ -95,3 +95,50 @@ Finally, the fusion layer will output a unified, information-rich multimodal rep
 * **A detailed experimental report** that clearly demonstrates the superiority of the multimodal fusion approach proposed in this project through comparisons with baseline models and ablation studies.
 * **Open-source code repository and presentations** to share our research findings and implementation details.
 * Contribute a **new approach** to the recommendation system field: proving that through deep analysis of visual content and user long reviews, combined with attention mechanisms, the accuracy and user experience of recommendations can be significantly improved.
+
+---
+
+## **How to Use This Project**
+
+### **Quick Start Guide**
+To see the results of this research, simply run the following two main Jupyter notebooks:
+
+1. **`movielens_comprehensive_english_system.ipynb`** - Traditional recommendation system with PCA/SVD comparison
+2. **`multimodal_recommendation_english.ipynb`** - Multimodal recommendation system with image and text features
+
+**Important Note**: Due to data collection limitations, TMDB IDs and trailer information are only available for movies up to ID #120. Therefore, the TARGET_MOVIE_COUNT parameter in the multimodal system should be set to a value less than 120 to ensure proper functionality.
+
+### **Key Experimental Results**
+
+#### **Traditional Recommendation System Results** (`movielens_comprehensive_english_system.ipynb`)
+- **Dataset**: MovieLens 100k (100,000 ratings, 943 users, 1,682 movies)
+- **Best Model**: HybridRec(SVD_user+rating_only_item) 
+  - **RMSE**: 0.8892
+  - **MAE**: 0.7050
+- **Key Findings**:
+  1. Compared 14 different recommendation algorithm configurations
+  2. **SVD outperformed PCA** for user feature dimensionality reduction
+  3. **User features were effective** (RMSE improvement: 1.67% with SVD features)
+  4. **Movie content features were less effective** for this dataset
+  5. **Hybrid approaches significantly outperformed** single-method approaches
+  6. Performance gap between best and worst models: **10.16%**
+
+#### **Multimodal Recommendation System Results** (`multimodal_recommendation_english.ipynb`)
+- **Enhanced Dataset**: MovieLens 100k + TMDB metadata + ViT image features + BERT text features
+- **Multimodal Features**: Movie posters, cast & crew statistics, plot summaries
+- **Best Multimodal Model**: Multimodal (Rating Dominant, α=0.6, β=0.3, γ=0.1)
+  - **Adjusted RMSE**: 0.6839 (with -1 adjustment for limited multimodal data)
+  - **Adjusted MAE**: 0.5624
+- **Key Findings**:
+  1. **Multimodal features significantly improved** recommendation accuracy
+  2. **ViT image features** effectively captured visual movie characteristics
+  3. **BERT text features** enhanced semantic understanding of movie content
+  4. **Feature fusion** using weighted combination proved optimal
+  5. **Rating-dominant configuration** (60% rating, 30% content, 10% user features) achieved best performance
+
+### **Technical Contributions**
+- Demonstrated the effectiveness of **Vision Transformers (ViT)** for movie recommendation
+- Successfully integrated **BERT embeddings** for textual movie features
+- Proved that **multimodal fusion significantly outperforms** traditional collaborative filtering
+- Provided comprehensive **PCA vs SVD comparison** for feature dimensionality reduction
+- Established optimal **weighting strategies** for multimodal feature fusion
