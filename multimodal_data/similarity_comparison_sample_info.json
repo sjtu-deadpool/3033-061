@@ -1,0 +1,26 @@
+{
+  "sample_images": [
+    "multimodal_images\\0015_Mr. Holland's Opus\\backdrop.jpg",
+    "multimodal_images\\0015_Mr. Holland's Opus\\still_2.jpg",
+    "multimodal_images\\0027_Bad Boys\\still_5.jpg",
+    "multimodal_images\\0027_Bad Boys\\still_2.jpg",
+    "multimodal_images\\0017_From Dusk Till Dawn\\still_5.jpg",
+    "multimodal_images\\0017_From Dusk Till Dawn\\still_1.jpg",
+    "multimodal_images\\0003_Four Rooms\\poster.jpg",
+    "multimodal_images\\0003_Four Rooms\\still_7.jpg",
+    "multimodal_images\\0031_Crimson Tide\\still_6.jpg",
+    "multimodal_images\\0031_Crimson Tide\\still_4.jpg"
+  ],
+  "sample_size": 10,
+  "comparison_timestamp": "2025-08-11 12:28:15",
+  "methods_tested": [
+    "histogram",
+    "ssim",
+    "perceptual_hash",
+    "combined",
+    "cnn_features",
+    "clip_features"
+  ],
+  "total_time_spent": 11.968209981918335,
+  "total_comparisons": 270
+}

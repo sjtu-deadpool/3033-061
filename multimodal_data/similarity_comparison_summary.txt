@@ -1,0 +1,18 @@
+SIMILARITY METHODS COMPARISON SUMMARY
+==================================================
+
+Comparison Date: 2025-08-11 12:28:15
+Sample Size: 10 images
+Total Methods Tested: 6
+
+PERFORMANCE SUMMARY:
+------------------------------
+histogram      :  426.5 comp/s, Avg Sim: 0.171
+ssim           :   41.4 comp/s, Avg Sim: 0.142
+perceptual_hash:  343.4 comp/s, Avg Sim: 0.497
+combined       :   34.2 comp/s, Avg Sim: 0.225
+cnn_features   :    7.3 comp/s, Avg Sim: 0.839
+clip_features  :   14.3 comp/s, Avg Sim: 0.771
+
+Fastest Method: histogram
+Most Diverse: ssim
