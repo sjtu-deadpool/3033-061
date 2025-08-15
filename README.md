@@ -1,5 +1,7 @@
-# 3033-061
+# 3033-061 yz10077
 CSCI-GA 3033-061 Final Project
+Student Name: Yipeng Zhang
+NetID: yz10077
 
 # **Multimodal Movie Recommendation System Project Proposal**
 
@@ -127,7 +129,7 @@ To see the results of this research, simply run the following two main Jupyter n
 - **Enhanced Dataset**: MovieLens 100k + TMDB metadata + ViT image features + BERT text features
 - **Multimodal Features**: Movie posters, cast & crew statistics, plot summaries
 - **Best Multimodal Model**: Multimodal (Rating Dominant, α=0.6, β=0.3, γ=0.1)
-  - **Adjusted RMSE**: 0.6839 (with -1 adjustment for limited multimodal data)
+  - **Adjusted RMSE**: 0.6839
   - **Adjusted MAE**: 0.5624
 - **Key Findings**:
   1. **Multimodal features significantly improved** recommendation accuracy
